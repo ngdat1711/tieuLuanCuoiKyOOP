@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class danhSachHangHoa {
     
 
-    private List <HangHoa> DSHH = new ArrayList<>();
+    private List <hangHoa> DSHH = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
     SimpleDateFormat sf = new SimpleDateFormat("DD/MM/YYYY");
     private Date ngaySanXuat;
@@ -39,16 +39,16 @@ public class danhSachHangHoa {
     }
 
     public void inThongTin() {
-        for (HangHoa hangHoa : DSHH) {
+        for (hangHoa hangHoa : DSHH) {
 
             System.out.println( hangHoa );
         
         }
     }
 
-    public HangHoa nhapDuLieu() {
+    public hangHoa nhapDuLieu() {
       
-        HangHoa hangHoa = null;
+        hangHoa hangHoa = null;
         
         try{
 
@@ -79,10 +79,12 @@ public class danhSachHangHoa {
                     System.out.println("Nhập Nhà Cung Cấp: ");
                     nhaCungCap = sc.nextLine();
 
-                } catch (Exception e) {
-
                 }
-                hangHoa = new HangThucPham(maHang, tenHang, soLuongTonKho, donGia, ngaySanXuat, ngayHetHan, nhaCungCap); break;
+
+                catch (Exception e) {
+                }
+
+                hangHoa = new hangThucPham(maHang, tenHang, soLuongTonKho, donGia, ngaySanXuat, ngayHetHan, nhaCungCap); break;
             
             case 2:
                 System.out.println("=====Hàng Điện Máy=====");
@@ -90,7 +92,7 @@ public class danhSachHangHoa {
                 TGBH = sc.nextInt();
                 System.out.println("Nhập Công Suất: ");
                 congSuat = sc.nextDouble();
-                hangHoa = new HangDienMay(maHang, tenHang, soLuongTonKho, donGia, TGBH, congSuat); break;
+                hangHoa = new dienMay(maHang, tenHang, soLuongTonKho, donGia, TGBH, congSuat); break;
 
             case 3:
                 System.out.println("=====Hàng Sứ=====");
@@ -117,14 +119,14 @@ public class danhSachHangHoa {
     public void menu(){
         do{
             System.out.println(">>>>>>>>>>>>>>>>>>> MENU <<<<<<<<<<<<<<<<<<<");
-            System.out.println("    1==================== Thêm Hàng Hóa =======================");
-            System.out.println("    2===================== Xóa Hàng Hóa =======================");
-            System.out.println("    3===================== Sửa Hàng Hóa =======================");
-            System.out.println("    4================== In Hàng Hóa Đã Bán ====================");
-            System.out.println("    5================== In Hàng Hóa Đã Bán ===================");
-            System.out.println("    6================ In Hàng Hóa Sắp Hết Hạn =================");
-            System.out.println("    7======================= Tìm Kiếm =========================");
-            System.out.println("    8======================= Thoát =========================");
+            System.out.println("    1==================== Thêm Hàng Hóa =======================1");
+            System.out.println("    2===================== Xóa Hàng Hóa =======================2");
+            System.out.println("    3===================== Sửa Hàng Hóa =======================3");
+            System.out.println("    4================== In Hàng Hóa Đã Bán ====================4");
+            System.out.println("    5================== In Hàng Hóa Đã Bán ===================5");
+            System.out.println("    6================ In Hàng Hóa Sắp Hết Hạn =================6");
+            System.out.println("    7======================= Tìm Kiếm =========================7");
+            System.out.println("    8======================= Thoát =========================8");
             System.out.println(" Nhập Số Bạn Muốn Chọn: ");
             int lc = sc.nextInt();
             

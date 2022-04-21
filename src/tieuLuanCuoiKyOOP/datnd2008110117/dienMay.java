@@ -1,6 +1,6 @@
 package tieuLuanCuoiKyOOP.datnd2008110117;
 
-public class dienMay extends HangHoa {
+public class dienMay extends hangHoa {
     int TGBH;
     double congSuat;
 
