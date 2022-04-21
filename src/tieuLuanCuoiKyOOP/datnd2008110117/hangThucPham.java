@@ -66,7 +66,7 @@ public class hangThucPham extends hangHoa{
         SimpleDateFormat sf = new SimpleDateFormat("DD/MM/YYYY");
         String str1 = sf.format(ngayHetHan);
         String str2 = sf.format(ngaySanXuat);
-        return "HangThucPham [Ngay Het Han=" + str1 + ", \nNgay San Xuat=" + str2 + ", \nNha Cung Cap=" + nhaCungCap
+        return "HangThucPham [Ngay Het Han=" + str1 + ", \n Ngay San Xuat=" + str2 + ", \n Nha Cung Cap=" + nhaCungCap
                 + "]" + super.toString();
     }
 }
