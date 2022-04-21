@@ -108,51 +108,34 @@ public class danhSachHangHoa {
         }
         return hangHoa;
     }catch(Exception e ){
-        System.out.println("Nhap sai roi! Nhap lai di!!!");
+        System.out.println("    ||| Vui Lòng Nhập Lại |||  ");
     }
         return hangHoa;
 
     }
 
-    // public void nhapHangHoa(){
-    //     System.out.println("Nhap so luong hang hoa muon them: ");
-    //     int n = sc.nextInt();
-    //     for (int i = 0; i < n; i++) {
-    //         System.out.printf("Nhap hang hoa thu: ", i +1);
-    //         HangHoa hangHoa = new HangHoa();
-    //         hangHoa.nhapDuLieu();
-
-
-
     public void menu(){
         do{
-            System.out.println("===========================MENU===========================");
-            System.out.println("=1====================Them Hang Hoa=======================");
-            System.out.println("=2=====================Xoa Hang Hoa=======================");
-            System.out.println("=3=====================Sua Hang Hoa=======================");
-            System.out.println("=4==================In Hang Hoa Da Ban====================");
-            System.out.println("=5==================In Hang Hoa Ton Kho===================");
-            System.out.println("=6================In Hang Hoa Sap Het Han=================");
-            System.out.println("=7=======================Tim Kiem=========================");
-            System.out.println("=0=========================THOÁT==========================");
-            System.out.println("Nhập Lựa Chọn Của Bạn: ");
+            System.out.println(">>>>>>>>>>>>>>>>>>> MENU <<<<<<<<<<<<<<<<<<<");
+            System.out.println("    1==================== Thêm Hàng Hóa =======================");
+            System.out.println("    2===================== Xóa Hàng Hóa =======================");
+            System.out.println("    3===================== Sửa Hàng Hóa =======================");
+            System.out.println("    4================== In Hàng Hóa Đã Bán ====================");
+            System.out.println("    5================== In Hàng Hóa Đã Bán ===================");
+            System.out.println("    6================ In Hàng Hóa Sắp Hết Hạn =================");
+            System.out.println("    7======================= Tìm Kiếm =========================");
+            System.out.println("    8======================= Thoát =========================");
+            System.out.println(" Nhập Số Bạn Muốn Chọn: ");
             int lc = sc.nextInt();
+            
             switch(lc){
-                case 0:
-                break;
-                case 1:
-                //them
-                break;
-                case 2:
-                break;
-                case 3:
-                break;
-                case 4:kiemTraHSD();
-                break;
-                // case 5:TimKiem();
-                // break;
-                default: System.out.println("Nhap lua chon sai!!! Vui long nhap lai");
-                break;
+                case 0: break;
+                case 1: break;
+                case 2: break;
+                case 3: break;
+                case 4: kiemTraHSD(); break;
+                case 5: TimKiem(); break;
+                default: System.out.println(" Vui Lòng Nhập Lại"); break;
             }            
         }while(true);
     }
@@ -160,25 +143,13 @@ public class danhSachHangHoa {
     public void kiemTraHSD() {
         Date today = new Date();
         today.getTime();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("DD/MM/YYYY");
         String st = simpleDateFormat.format(today);
         if (this.gethSD().compareTo(today) < 0) {
-            System.out.println("Hôm nay là ngày " + st + ", hàng hóa đã hết hạn ");
+            System.out.println("Hôm Nay Là Ngày " + st + ", Hàng Hóa Đã Hết Hạn ");
         } else {
-            System.out.println("Hôm nay là ngày " + st + ", hàng hóa vẫn còn hạn ");
+            System.out.println("Hôm Nay Là Ngày " + st + ", Hàng Hóa Vẫn Còn Hạn ");
         }
     }
-
-    // public void TimKiem(){
-    //     sc.nextLine();
-    //     System.out.println("Nhap ma hang: ");
-    //     int maHang = sc.nextInt();
-    //     for (HangHoa hangHoa : dsHH) {
-    //         if(maHang.equals(maHang)){
-    //             hangHoa.inThongTin();
-    //             break;
-    //         }
-    //     }
-    // }
     
 }
