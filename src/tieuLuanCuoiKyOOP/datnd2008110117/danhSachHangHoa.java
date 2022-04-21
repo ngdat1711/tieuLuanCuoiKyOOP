@@ -65,7 +65,7 @@ public class danhSachHangHoa {
         System.out.println("Đơn Giá: ");
         double donGia = sc.nextDouble();
 
-        System.out.println("Lựa Chọn Của Bạn : [1: Hàng Thực Phẩm] [2: Hàng Điện Máy] [3: Hàng Sanh Su]");
+        System.out.println("Lựa Chọn Của Bạn : [1: Hàng Thực Phẩm] [2: Hàng Điện Máy] [3: Hàng Sứ]");
         int lc = sc.nextInt();
         switch (lc) {
             case 1:
@@ -83,29 +83,28 @@ public class danhSachHangHoa {
 
                 }
                 hangHoa = new HangThucPham(maHang, tenHang, soLuongTonKho, donGia, ngaySanXuat, ngayHetHan, nhaCungCap); break;
+            
             case 2:
-                System.out.println("===HANG DIEN MAY===");
-                System.out.println("Nhap thoi gian bao hanh: ");
-                tGBH = sc.nextInt();
-                System.out.println("Nhap cong suat: ");
+                System.out.println("=====Hàng Điện Máy=====");
+                System.out.println("Nhập Thời Gian Bảo Hàng: ");
+                TGBH = sc.nextInt();
+                System.out.println("Nhập Công Suất: ");
                 congSuat = sc.nextDouble();
-                hangHoa = new HangDienMay(maHang, tenHang, soLuongTonKho, donGia, tGBH, congSuat);
+                hangHoa = new HangDienMay(maHang, tenHang, soLuongTonKho, donGia, TGBH, congSuat); break;
 
-                break;
             case 3:
-                System.out.println("===HANG SANH SU===");
-                System.out.println("Nhap nha san xuat: ");
+                System.out.println("=====Hàng Sứ=====");
+                System.out.println("Nhập Nhà Sản Suất: ");
                 nhaSanXuat = sc.nextLine();
                 try {
-                    System.out.println("Nhap ngay nhap kho: ");
+                    System.out.println("Nhập Ngày Nhập Kho: ");
                     ngayNhapKho = sf.parse(sc.nextLine());
                 } catch (Exception e) {
 
-                }
-                break;
+                } break;
+
             default:
-                System.out.println("xxx");
-                break;
+                System.out.println(" XXX "); break;
         }
         return hangHoa;
     }catch(Exception e ){
@@ -123,8 +122,7 @@ public class danhSachHangHoa {
     //         HangHoa hangHoa = new HangHoa();
     //         hangHoa.nhapDuLieu();
 
-    //     }
-    // }
+
 
     public void menu(){
         do{
