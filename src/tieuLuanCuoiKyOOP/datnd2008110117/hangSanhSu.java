@@ -2,19 +2,19 @@ package tieuLuanCuoiKyOOP.datnd2008110117;
 
 import java.util.Date;
 
-public class hangSu extends hangHoa {
+public class hangSanhSu extends hangHoa {
     private String nhaSanXuat;
     private Date ngayNhapKho;
     
-    public hangSu(){ 
+    public hangSanhSu(){ 
     }
 
-    public hangSu(String nhaSanXuat, Date ngayNhapKho) {
+    public hangSanhSu(String nhaSanXuat, Date ngayNhapKho) {
         this.nhaSanXuat = nhaSanXuat;
         this.ngayNhapKho = ngayNhapKho;
     }
 
-    public hangSu(int maHang, String tenHang, double soLuongTonKho, double donGia, String nhaSanXuat, Date ngayNhapKho){
+    public hangSanhSu(int maHang, String tenHang, double soLuongTonKho, double donGia, String nhaSanXuat, Date ngayNhapKho){
         
         super(maHang, tenHang, soLuongTonKho, donGia);
         this.nhaSanXuat = nhaSanXuat;

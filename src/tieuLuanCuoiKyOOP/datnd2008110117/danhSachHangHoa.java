@@ -65,7 +65,7 @@ public class danhSachHangHoa {
         System.out.println("Đơn Giá: ");
         double donGia = sc.nextDouble();
 
-        System.out.println("Lựa Chọn Của Bạn : [1: Hàng Thực Phẩm] [2: Hàng Điện Máy] [3: Hàng Sứ]");
+        System.out.println("Lựa Chọn Của Bạn : [1: Hàng Thực Phẩm] [2: Hàng Điện Máy] [3: Hàng Sành Sứ]");
         int lc = sc.nextInt();
         switch (lc) {
             case 1:
@@ -95,7 +95,7 @@ public class danhSachHangHoa {
                 hangHoa = new dienMay(maHang, tenHang, soLuongTonKho, donGia, TGBH, congSuat); break;
 
             case 3:
-                System.out.println("=====Hàng Sứ=====");
+                System.out.println("=====Hàng Sành Sứ=====");
                 System.out.println("Nhập Nhà Sản Suất: ");
                 nhaSanXuat = sc.nextLine();
                 try {
@@ -137,7 +137,7 @@ public class danhSachHangHoa {
                 case 3: break;
                 case 4: kiemTraHSD(); break;
                 case 5: TimKiem(); break;
-                default: System.out.println(" Vui Lòng Nhập Lại"); break;
+                default: System.out.println(" Vui Lòng Nhập Lại "); break;
             }            
         }while(true);
     }
