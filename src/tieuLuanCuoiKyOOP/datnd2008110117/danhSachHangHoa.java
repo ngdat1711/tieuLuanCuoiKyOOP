@@ -123,7 +123,7 @@ public class danhSachHangHoa {
             System.out.println("    2===================== Xóa Hàng Hóa =======================2");
             System.out.println("    3===================== Sửa Hàng Hóa =======================3");
             System.out.println("    4================== In Hàng Hóa Đã Bán ====================4");
-            System.out.println("    5================== In Hàng Hóa Đã Bán ===================5");
+            System.out.println("    5================== In Hàng Hóa Tồn Kho ===================5");
             System.out.println("    6================ In Hàng Hóa Sắp Hết Hạn =================6");
             System.out.println("    7======================= Tìm Kiếm =========================7");
             System.out.println("    8======================= Thoát =========================8");

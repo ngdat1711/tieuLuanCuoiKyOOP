@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class testDrive {
     public static void main(String[] args) {
-        hangHoa hangHoa = new hangThucPham(int maHang; String tenHang; double soLuongTonKho; double donGia; String nhaSanXuat; Date ngayNhapKho);
+        hangHoa hangHoa = new hangThucPham (int maHang; String tenHang; double soLuongTonKho; double donGia; String nhaSanXuat; Date ngayNhapKho);
         danhSachHangHoa danhSachHangHoa = new danhSachHangHoa();
         danhSachHangHoa.themhangHoa(hangHoa);
         danhSachHangHoa.inThongTin();
@@ -14,13 +14,13 @@ public class testDrive {
         danhSachHangHoa.kiemTraHSD();
         danhSachHangHoa.inThongTin();
         
-        String lc = null;
+        String LC = null;
         do {
              hangHoa HangHoa = danhSachHangHoa.nhapHangHoa();
              danhSachHangHoa.themHangHoa(hangHoa);
              System.out.println("Bạn Có Muốn Tiếp Tục Không [Yes], [No]");
-             lc = danhSachHangHoa.sc.nextLine();
-         } while (lc.equals("Y"));
+             LC = danhSachHangHoa.sc.nextLine();
+         } while (LC.equals ("Y"));
 
         danhSachHangHoa.inThongTin();
         
